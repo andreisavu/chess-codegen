@@ -1,0 +1,5 @@
+# Project Deliverables
+
+* The project deliverables should be two files: `engine.py` and `engine_tests.py`.
+* `engine.py` should implement a UCI compatible interface and be usable in that context.
+* `engine_tests.py` contains various tests to validate the code in `engine.py` is working correctly.
