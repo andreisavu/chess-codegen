@@ -3,11 +3,13 @@ name = "chess-codegen"
 version = "0.1.0"
 description = "A chess playing program developed by a codegen agent"
 authors = ["Andrei Savu <savu.andrei@gmail.com>"]
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.9"
 click = "^8.0.1"
 chess = "^1.10.0"
+stockfish = "^3.28.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.4"
