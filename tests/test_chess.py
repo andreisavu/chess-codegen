@@ -11,8 +11,7 @@ def test_chess_opening_move():
 
 def test_chess_five_moves():
     stockfish = Stockfish(path="bin/stockfish/stockfish-ubuntu-x86-64-avx2")
-    stockfish.set_option("Threads", 1)
-    stockfish.set_option("Minimum Thinking Time", 10)
+    stockfish.update_engine_parameters({"Threads": 1, "Minimum Thinking Time": 10})
     board = chess.Board()
     stockfish.set_fen_position(board.fen())
 
