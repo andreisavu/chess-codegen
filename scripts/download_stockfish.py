@@ -1,25 +1,25 @@
 import os
 import requests
-import zipfile
+import tarfile
 import platform
 
 def download_stockfish():
-    url = "https://stockfishchess.org/files/stockfish_14.1_win_x64.zip"
+    url = ""
     if platform.system() == "Linux":
-        url = "https://stockfishchess.org/files/stockfish_14.1_linux_x64.zip"
+        url = "https://github.com/official-stockfish/Stockfish/releases/latest/download/stockfish-ubuntu-x86-64-avx2.tar"
     elif platform.system() == "Darwin":
-        url = "https://stockfishchess.org/files/stockfish_14.1_mac.zip"
+        url = "https://github.com/official-stockfish/Stockfish/releases/latest/download/stockfish-macos-m1-apple-silicon.tar"
 
     response = requests.get(url)
     os.makedirs("bin", exist_ok=True)
-    zip_path = os.path.join("bin", "stockfish.zip")
-    with open(zip_path, "wb") as f:
+    tar_path = os.path.join("bin", "stockfish.tar")
+    with open(tar_path, "wb") as f:
         f.write(response.content)
 
-    with zipfile.ZipFile(zip_path, "r") as zip_ref:
-        zip_ref.extractall("bin")
+    with tarfile.open(tar_path, "r") as tar_ref:
+        tar_ref.extractall("bin")
 
-    os.remove(zip_path)
+    os.remove(tar_path)
 
 if __name__ == "__main__":
     download_stockfish()
