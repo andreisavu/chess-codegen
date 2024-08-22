@@ -1,6 +1,9 @@
 import chess
+from stockfish import Stockfish
 
 def test_chess_opening_move():
+    stockfish = Stockfish(path="bin/stockfish")
     board = chess.Board()
-    board.push(chess.Move.from_uci("e2e4"))
-    assert board.peek() == chess.Move.from_uci("e2e4")
+    best_move = stockfish.get_best_move()
+    board.push(chess.Move.from_uci(best_move))
+    assert board.peek() == chess.Move.from_uci(best_move)

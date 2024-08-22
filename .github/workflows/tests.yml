@@ -21,5 +21,8 @@ jobs:
     - name: Install dependencies
       run: poetry install
 
+    - name: Download Stockfish
+      run: python scripts/download_stockfish.py
+
     - name: Run tests
       run: poetry run pytest
