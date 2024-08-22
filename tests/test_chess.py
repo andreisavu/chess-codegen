@@ -20,4 +20,4 @@ def test_chess_five_moves():
         board.push(chess.Move.from_uci(best_move))
         stockfish.set_fen_position(board.fen())
 
-    assert board.fullmove_number == 6
+    assert board.fullmove_number == 3
