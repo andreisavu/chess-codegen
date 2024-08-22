@@ -1,0 +1,1 @@
+For the first iteration, the goal is to build a UCI interface compatible chess program that makes legal moves and can plan a game end to end. Winning is not a goal.
