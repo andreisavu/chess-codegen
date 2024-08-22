@@ -19,6 +19,7 @@ def download_stockfish():
     with tarfile.open(tar_path, "r") as tar_ref:
         tar_ref.extractall("bin")
 
+    os.chmod(os.path.join("bin", "stockfish"), 0o755)
     os.remove(tar_path)
 
 if __name__ == "__main__":
