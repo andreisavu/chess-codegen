@@ -20,7 +20,6 @@ class ChessEngine:
         ]
 
     def is_valid_move(self, move):
-        # Implement move validation logic here
         start_pos = (8 - int(move[1]), ord(move[0]) - ord('a'))
         end_pos = (8 - int(move[3]), ord(move[2]) - ord('a'))
         piece = self.board[start_pos[0]][start_pos[1]]
