@@ -42,11 +42,11 @@ The project deliverables should be two files: engine.py and engine_tests.py.
 
 - engine_tests.py contains various tests to validate the correctness of the UCI implementation in engine.py.
 
-# Iteration 1
+# Phase 1
 
 ## Goal
 
-The primary focus of this iteration is to establish a foundational chess engine capable of generating legal moves and playing a complete game from start to finish, regardless of the quality of those moves. The engine must also implement a basic UCI interface to communicate with a GUI or other chess programs.
+The primary focus of this phase is to establish a foundational chess engine capable of generating legal moves and playing a complete game from start to finish, regardless of the quality of those moves. The engine must also implement a basic UCI interface to communicate with a GUI or other chess programs.
 
 ## Key Goals
 
@@ -60,7 +60,7 @@ The primary focus of this iteration is to establish a foundational chess engine 
 ## Non-Goals
 
 - Strength: At this stage, the engine's playing strength is not a priority. The focus is on functionality and UCI compatibility.
-- Advanced UCI Features: Complex UCI features like time management, opening books, or endgame tablebases are not required in this iteration.
+- Advanced UCI Features: Complex UCI features like time management, opening books, or endgame tablebases are not required in this phase.
 
 ## Success Criteria
 
@@ -70,4 +70,4 @@ The primary focus of this iteration is to establish a foundational chess engine 
 
 ## Note
 
-This first iteration is focused on establishing a functional foundation for further development. Subsequent iterations will focus on improving the engine's playing strength, optimizing its performance, and implementing more advanced UCI features.
+This first phase is focused on establishing a functional foundation for further development. Subsequent phases will focus on improving the engine's playing strength, optimizing its performance, and implementing more advanced UCI features.
